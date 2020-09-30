@@ -96,9 +96,10 @@ read it before opening a new issue about your will.")
                 (fg2             "#e2e2dc" "#e4e4e4" "brightwhite")
                 (fg3             "#ccccc7" "#c6c6c6" "white")
                 (fg4             "#b6b6b2" "#b2b2b2" "white")
+                (cursor-bg       "#CB2431" "unspecified-bg" "unspecified-bg")
                 (other-blue      "#0189cc" "#0087ff" "brightblue")))
       (faces '(;; default
-               (cursor :background ,fg3)
+               (cursor :background ,cursor-bg)
                (completions-first-difference :foreground ,dracula-pink :weight bold)
                (default :background ,dracula-bg :foreground ,dracula-fg)
                (default-italic :slant italic)
@@ -494,6 +495,7 @@ read it before opening a new issue about your will.")
                       (list :foreground dracula-comment :background dracula-bg
                             :box dracula-bg)
                     (list :foreground dracula-fg :background bg2 :box bg2)))
+               (mini-modeline-mode-line :inherit mode-line :height 0.1 :box nil)
                ;; mu4e
                (mu4e-unread-face :foreground ,dracula-pink :weight normal)
                (mu4e-view-url-number-face :foreground ,dracula-purple)
@@ -688,6 +690,8 @@ read it before opening a new issue about your will.")
                (web-mode-warning-face :inherit ,font-lock-warning-face)
                ;; which-func
                (which-func :inherit ,font-lock-function-name-face)
+               ;; perspective
+               (persp-selected-face :weight bold :foreground ,dracula-pink)
                ;; whitespace
                (whitespace-big-indent :background ,dracula-red :foreground ,dracula-red)
                (whitespace-empty :background ,dracula-orange :foreground ,dracula-red)
